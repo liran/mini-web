@@ -1,6 +1,7 @@
 import { Select, Calendar, Avatar, Divider, Timeline, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import React from 'react';
+import CustomIcon from './CustomIcon';
 
 const { Option } = Select;
 
@@ -45,6 +46,8 @@ class PendingTimeLine extends React.Component {
 const Antd = () => {
   return (
     <div>
+      <CustomIcon />
+      <Divider />
       <Select mode="tags" style={{ width: '100%' }} placeholder="Tags Mode" onChange={handleChange}>
         {children}
       </Select>
