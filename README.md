@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/)+[Antd](https://ant.design/) mini project.
 
+## Usage
+```bash
+yarn create next-app --exmple https://github.com/liran/next-antd [AppName]
+```
+
 ## Getting Started
 
 ```bash
