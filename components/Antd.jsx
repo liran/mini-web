@@ -1,5 +1,6 @@
-import { Select, Calendar, Avatar, Divider } from 'antd';
+import { Select, Calendar, Avatar, Divider, Timeline, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+import React from 'react';
 
 const { Option } = Select;
 
@@ -14,6 +15,31 @@ function handleChange(value) {
 
 function onPanelChange(value, mode) {
   console.log(value.format('YYYY-MM-DD'), mode);
+}
+
+class PendingTimeLine extends React.Component {
+  state = {
+    reverse: false,
+  };
+
+  handleClick = () => {
+    this.setState({ reverse: !this.state.reverse });
+  };
+
+  render() {
+    return (
+      <div>
+        <Timeline pending="Recording..." reverse={this.state.reverse}>
+          <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
+          <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>
+          <Timeline.Item>Technical testing 2015-09-01</Timeline.Item>
+        </Timeline>
+        <Button type="primary" style={{ marginTop: 16 }} onClick={this.handleClick}>
+          Toggle Reverse
+        </Button>
+      </div>
+    );
+  }
 }
 
 const Antd = () => {
@@ -39,6 +65,8 @@ const Antd = () => {
           <Avatar shape="square" size="small" icon={<UserOutlined />} />
         </div>
       </div>
+      <Divider dashed />
+      <PendingTimeLine />
     </div>
   );
 };
