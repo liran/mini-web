@@ -1,4 +1,4 @@
-import AntdTestComponents from 'components/Antd';
+import AntdTestComponents from 'components/AntdTest';
 import styles from './index.less';
 
 export default function Home() {

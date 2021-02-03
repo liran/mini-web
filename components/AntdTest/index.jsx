@@ -2,6 +2,7 @@ import { Select, Calendar, Avatar, Divider, Timeline, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import React from 'react';
 import CustomIcon from './CustomIcon';
+import UseImage from './UseImage';
 
 const { Option } = Select;
 
@@ -70,6 +71,8 @@ const Antd = () => {
       </div>
       <Divider dashed />
       <PendingTimeLine />
+      <Divider dashed />
+      <UseImage />
     </div>
   );
 };
