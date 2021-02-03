@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/)+[Antd](https://ant.design/) mini projec
 
 ## Usage
 ```bash
-yarn create next-app --exmple https://github.com/liran/next-antd [AppName]
+yarn create next-app --example https://github.com/liran/next-antd [AppName]
 ```
 
 ## Getting Started
