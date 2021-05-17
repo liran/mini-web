@@ -15,7 +15,7 @@ module.exports = withImages({
   fileExtensions: ['jpg', 'jpeg', 'png', 'gif'],
   ...withCss(
     withLess({
-      cssModules: true,
+      cssModules: false,
       lessLoaderOptions: {
         javascriptEnabled: true,
         modifyVars: themeVariables, // make your antd custom effective

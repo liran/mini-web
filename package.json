@@ -11,9 +11,12 @@
   "dependencies": {
     "@ant-design/icons": "^4.4.0",
     "antd": "^4.15.5",
+    "autoprefixer": "^9",
     "next": "10.2.0",
+    "postcss": "^7",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",

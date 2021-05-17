@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/)+[Antd](https://ant.design/) mini project.
+This is a [Next.js](https://nextjs.org/)+[Antd](https://ant.design/)+[Tailwindcss](https://tailwindcss.com/) mini project.
 
 ## Usage
 ```bash
-yarn create next-app --example https://github.com/liran/next-antd [AppName]
+yarn create next-app --example https://github.com/liran/next-antd/tree/tailwindcss [AppName]
 ```
 
 ## Getting Started
