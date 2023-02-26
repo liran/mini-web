@@ -10,6 +10,7 @@
     "release": "rm -rf .next && yarn build && yarn export"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "animate.css": "^4.1.1",
     "antd": "^5.2.2",
     "autoprefixer": "^10.4.13",

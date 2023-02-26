@@ -9,11 +9,11 @@ import {
   Switch,
 } from 'antd';
 import { DatePickerProps, Space, Input } from 'antd';
-import { SmileFilled } from '@ant-design/icons';
 import Link from 'next/link';
 import { AiFillGold } from 'react-icons/ai';
 import React from 'react';
 import type { NextPage } from 'next';
+import Icon from '@ant-design/icons';
 
 const FormItem = Form.Item;
 const { Search } = Input;
@@ -33,15 +33,14 @@ const Home: NextPage = () => {
   return (
     <div style={content}>
       <Link href="/tailwind">
-        <Button type="primary">
-          <AiFillGold style={{ fontSize: 20 }} /> Go TailWind page
+        <Button
+          type="primary"
+          icon={<Icon component={AiFillGold} style={{ fontSize: 16 }} spin />}
+        >
+          Go TailWind page
         </Button>
       </Link>
       <div className="text-center mb-5">
-        <Link href="#" className="logo mr-0">
-          <SmileFilled style={{ fontSize: 48 }} />
-        </Link>
-
         <p className="mb-0 mt-3 text-disabled">Welcome to the world !</p>
       </div>
       <div>
