@@ -7,8 +7,9 @@ import {
   Select,
   Slider,
   Switch,
+  Input,
+  Space,
 } from 'antd';
-import { DatePickerProps, Space, Input } from 'antd';
 import Link from 'next/link';
 import { AiFillGold } from 'react-icons/ai';
 import React from 'react';
@@ -23,13 +24,6 @@ const content = {
 };
 
 const Home: NextPage = () => {
-  const onDatePickerChange: DatePickerProps['onChange'] = (
-    date,
-    dateString
-  ) => {
-    console.log(date, dateString);
-  };
-
   return (
     <div style={content}>
       <Link href="/tailwind">
@@ -43,6 +37,45 @@ const Home: NextPage = () => {
       <div className="text-center mb-5">
         <p className="mb-0 mt-3 text-disabled">Welcome to the world !</p>
       </div>
+
+      <Select
+        showSearch
+        style={{ width: 200 }}
+        placeholder="Search to Select"
+        optionFilterProp="children"
+        filterOption={(input, option) => (option?.label ?? '').includes(input)}
+        filterSort={(optionA, optionB) =>
+          (optionA?.label ?? '')
+            .toLowerCase()
+            .localeCompare((optionB?.label ?? '').toLowerCase())
+        }
+        options={[
+          {
+            value: '1',
+            label: 'Not Identified',
+          },
+          {
+            value: '2',
+            label: 'Closed',
+          },
+          {
+            value: '3',
+            label: 'Communicated',
+          },
+          {
+            value: '4',
+            label: 'Identified',
+          },
+          {
+            value: '5',
+            label: 'Resolved',
+          },
+          {
+            value: '6',
+            label: 'Cancelled',
+          },
+        ]}
+      />
       <div>
         <Form
           layout="horizontal"
@@ -95,7 +128,7 @@ const Home: NextPage = () => {
           </FormItem>
 
           <FormItem label="DatePicker">
-            <DatePicker showTime onChange={onDatePickerChange} />
+            <DatePicker showTime />
           </FormItem>
           <FormItem style={{ marginTop: 48 }} wrapperCol={{ offset: 8 }}>
             <Button type="primary" htmlType="submit">
