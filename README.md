@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/)+[Antd](https://ant.design/)+[Tailwindcs
 
 ## Usage
 ```bash
-yarn create next-app --example https://github.com/liran/next-antd/tree/tailwindcss [AppName]
+yarn create next-app --example https://github.com/liran/mini-web [AppName]
 ```
 
 ## Getting Started
@@ -19,9 +19,9 @@ npm run dev
 yarn dev
 
 # release
-npm run build
+npm run release
 # or
-yarn build
+yarn release
 ```
 
 ## Learn More
